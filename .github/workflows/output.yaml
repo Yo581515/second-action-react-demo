@@ -1,0 +1,9 @@
+name: Output Information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJson(github) }}"
+      #run: echo "The event name is $GITHUB_EVENT_NAME, the repository is $GITHUB_REPOSITORY, and the workflow is $GITHUB_WORKFLOW."
